@@ -7,7 +7,7 @@ async function doMyAttendance(login = false) {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage();
   await page.goto(process.env.COMPANY_DOMAIN);
-  await page.fill("#username", process.env.EMAIL);
+  await page.fill("#username", process.env.USERNAME);
   await page.fill("#password", process.env.PASSWORD);
   await page.click("button");
 
